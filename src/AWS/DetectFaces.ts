@@ -2,7 +2,7 @@ import {Dispatch, SetStateAction} from "react";
 import AWS from 'aws-sdk';
 import {DetectFacesResponse} from "aws-sdk/clients/rekognition";
 
-const DetectFaces = (imageData: ArrayBuffer,setList:Dispatch<SetStateAction<any>>,setLoading:Dispatch<SetStateAction<boolean>>) => {
+const DetectFaces = async(imageData: ArrayBuffer,setList:Dispatch<SetStateAction<any>>,setLoading:Dispatch<SetStateAction<boolean>>) => {
     const rekognition = new AWS.Rekognition();
     const params = {
         Image: {
@@ -12,7 +12,7 @@ const DetectFaces = (imageData: ArrayBuffer,setList:Dispatch<SetStateAction<any>
             'ALL',
         ]
     };
-    rekognition.detectFaces(params,(error,response:DetectFacesResponse) => {
+    await rekognition.detectFaces(params,(error,response:DetectFacesResponse) => {
         if(error){
             console.error(error.stack);
             alert("Oops ! Something went wrong !");

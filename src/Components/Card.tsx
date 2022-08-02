@@ -135,7 +135,7 @@ const Card : React.FC <{file?:ImageData}> = () => {
                             <td className={"values"} >
                                 <ul>
                                     <li>Brightness : {details.Quality?.Brightness?.toFixed(2)} </li>
-                                    <li>Roll : Sharpness : {details.Quality?.Sharpness?.toFixed(2)}  </li>
+                                    <li>Sharpness : {details.Quality?.Sharpness?.toFixed(2)}  </li>
                                 </ul>
                             </td>
                         </tr>
