@@ -1,0 +1,12 @@
+.headnav{
+    background-color: #7b7bc0;
+}
+
+.title{
+    color: white;
+    text-shadow: #6464ac 1px 2px;
+}
+
+.title:hover{
+    color: #d6d0d0;
+}
