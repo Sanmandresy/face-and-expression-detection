@@ -16,7 +16,6 @@ const Card : React.FC <{file?:ImageData}> = () => {
     const [list,setList] = useState<Array<FaceDetail>>();
     const [tableVisibility,setVisibility] = useState<string>("hidden");
     const [isLoading,setLoading] = useState<boolean>(false);
-    const [index,increment] = useState<number>(0);
 
     const changeImageToDisplay = () => {
         setNewButton("hidden");
